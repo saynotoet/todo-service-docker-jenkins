@@ -7,5 +7,5 @@ RUN mvn -f /home/app/pom.xml clean package
 # Create an Image
 FROM adoptopenjdk:11-jre-hotspot-bionic
 EXPOSE 5000
-COPY --from=stage1 /home/app/target/TodoService-0.0.2RELEASE.jar TodoService-0.0.2RELEASE.jar
-ENTRYPOINT ["sh", "-c", "java -jar /TodoService-0.0.2RELEASE.jar"]
+COPY --from=stage1 /home/app/target/TodoService-0.0.3RELEASE.jar TodoService-0.0.3RELEASE.jar
+ENTRYPOINT ["sh", "-c", "java -jar /TodoService-0.0.3RELEASE.jar"]
