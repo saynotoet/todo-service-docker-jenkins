@@ -4,6 +4,7 @@ WORKDIR /home/app
 COPY . /home/app/
 RUN mvn -f /home/app/pom.xml clean package
 
+
 # Create an Image
 FROM adoptopenjdk:11-jre-hotspot-bionic
 EXPOSE 5000
